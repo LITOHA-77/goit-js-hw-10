@@ -1,19 +1,3 @@
-/*HBS 
-npm install --save-dev parcel-transformer-hbs
-
-====== add to parcel:
- "transformers": {
-    "*.hbs": [
-        "parcel-transformer-hbs"
-      ]
-    }
-===== import markup from './templates/markup.hbs';
-*/
-
-//npm i notiflix
-//npm i --save lodash.debounce
-//const debounce = require('lodash.debounce');
-
 import './css/styles.css';
 import Notiflix from 'notiflix';
 import debounce from 'lodash.debounce';
