@@ -6,7 +6,6 @@ export function emptyMarkup() {
 }
 
 export function renderCountriesListMarkup(countries) {
-  //console.log('it is countries inside renderCountriesListMarkup(): ', countries);
   const shortMarkup = countries.reduce(
     (acc, { name, flags } = country) =>
       acc +
@@ -23,16 +22,6 @@ export function renderFullInfoMarkup(countries) {
   const singleMarkup = (
     { name, capital, flags, population, languages } = countries[0]
   ) => {
-    // console.log('name : ', name); console.log('capital : ', capital);
-    // console.log('flags : ', flags);
-    // console.log('population : ', population);
-    // console.log('languages : ', languages);
-
-    //  ===== розпаковуємо усі мови з об'єкта languages: ======
-    // цей вираз відразу додано в розмітку нижче
-    // const allLanguages = Object.values(languages).join(', ');
-    // console.log("Languages in this country: ", allLanguages);
-
     const fullCountryInfoMarkup = `<div class="country-card">
             <div class="flag-and-name">
                 <img class="flag" src="${flags.svg}" alt="${
@@ -42,24 +31,23 @@ export function renderFullInfoMarkup(countries) {
             </div>
             
             <ul class="list additional-info">
-                <li class="info-item">
-                    <h3 class="info-name"> Capital: </h3> 
-                    <h3 class="info-value"> 
+                <li class="item">
+                    <h3 class="description"> Capital: </h3> 
+                    <h3 class="value"> 
                     ${capital}</h3>
                 </li>
-                <li class="info-item"> 
-                    <h3 class="info-name"> Population: </h3>
-                    <h3 class="info-value"> 
+                <li class="item"> 
+                    <h3 class="description"> Population: </h3>
+                    <h3 class="value"> 
                     ${population}</h3>
                 </li>
-                <li class="info-item">
-                    <h3 class="info-name"> Languages:</h3>
-                    <h3 class="info-value">
+                <li class="item">
+                    <h3 class="description"> Languages:</h3>
+                    <h3 class="value">
                     ${Object.values(languages).join(', ')}</h3>
                 </li>
             </ul>
         </div>`;
-    //console.log('fullCountryInfoMarkup : ', fullCountryInfoMarkup);
 
     return fullCountryInfoMarkup;
   };

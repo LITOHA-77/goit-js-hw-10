@@ -18,4 +18,53 @@ body {
   max-width: 320px;
   margin-bottom: 16px;
 }
-  
+
+.list {
+  list-style: none;
+}
+
+.country-list,
+.additional-info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  padding-top: 10px;
+  padding-left: 0;
+}
+
+.temp-list__item,
+.flag-and-name,
+.item {
+  display: flex;
+  align-items: center;
+}
+
+.flag {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.temp-list__name {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1;
+}
+
+
+.country-name {
+  margin: 0;
+  font-size: 35px;
+}
+
+.item,
+.description,
+.value {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.value {
+  margin-left: 15px;
+  font-weight: 400;
+}
